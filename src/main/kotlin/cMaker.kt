@@ -30,4 +30,12 @@ class CoffeeMaker(val coffeeCapacity: Int = 50, val waterCapacity: Int = 150) {
             println("Coffee maker is not on.")
         }
     }
+    fun fillAll() {
+        if (isOn) {
+            coffeeAmount = coffeeCapacity
+            waterAmount = waterCapacity
+        } else {
+            println("Coffee maker is not on.")
+        }
+    }
 }
