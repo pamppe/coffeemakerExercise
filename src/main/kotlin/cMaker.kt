@@ -2,7 +2,9 @@ class CoffeeMaker(val coffeeCapacity: Int = 50, val waterCapacity: Int = 150) {
     var coffeeAmount: Int = 0
     var waterAmount: Int = 0
     var isOn: Boolean = false
-        private set
+    override fun toString(): String {
+        return "CoffeeMaker (coffeeCapacity= $coffeeCapacity, waterCapacity= $waterCapacity, coffeeAmount= $coffeeAmount, waterAmount= $waterAmount, isOn= $isOn)"
+    }
 
     fun makeDoubleEspresso() {
         if (isOn) {
@@ -39,3 +41,23 @@ class CoffeeMaker(val coffeeCapacity: Int = 50, val waterCapacity: Int = 150) {
         }
     }
 }
+
+
+    fun main(){
+        val cm = CoffeeMaker()
+        println(cm)
+        cm.makeRegular()
+        println(cm)
+        cm.isOn = true
+        println(cm)
+        cm.makeRegular()
+        println(cm)
+        cm.fillAll()
+        println(cm)
+        cm.makeRegular()
+        println(cm)
+        cm.makeDoubleEspresso()
+        println(cm)
+        cm.makeDoubleEspresso()
+
+    }
