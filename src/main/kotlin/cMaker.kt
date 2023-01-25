@@ -2,6 +2,7 @@ class CoffeeMaker(val coffeeCapacity: Int = 50, val waterCapacity: Int = 150) {
     var coffeeAmount: Int = 0
     var waterAmount: Int = 0
     var isOn: Boolean = false
+    
     override fun toString(): String {
         return "CoffeeMaker (coffeeCapacity= $coffeeCapacity, waterCapacity= $waterCapacity, coffeeAmount= $coffeeAmount, waterAmount= $waterAmount, isOn= $isOn)"
     }
